@@ -1,0 +1,9 @@
+package protobuff;
+
+option java_package = "com.github.jieshaocd.protobuff";
+option java_outer_classname = "ProtoProvider";
+
+message Provider {
+    optional int32 id = 1;
+    optional string name = 2;
+}

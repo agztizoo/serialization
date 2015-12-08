@@ -1,0 +1,51 @@
+package protobuff;
+
+import "provider.proto";
+
+option java_package = "com.github.jieshaocd.protobuff";
+option java_outer_classname = "ProtoApp";
+
+message App {
+    required int32 id = 1;
+    optional string name = 2;
+    optional string description = 3;
+    optional int32 size = 4;
+    optional string publisher = 5;
+    optional int32 status = 6;
+    optional string package_name = 7;
+    optional string version_code = 8;
+    optional string version_name = 9;
+    optional string add_time = 10;
+    optional string update_time = 11;
+    optional int64 download_count = 12;
+    optional int64 real_download_count = 13;
+    optional int64 read_count = 14;
+    optional int64 real_read_count = 15;
+    optional string apk=16;
+    optional string icon=17;
+    optional string banner_icon=18;
+    optional string screenshot=19;
+    optional int64 rank=20;
+    optional int64 recommend_count = 21;
+    optional int32 app_type = 22;
+    optional string pay_type = 23;
+    optional float price = 24;
+    optional string percent = 25;
+    optional int32 charge_type = 26;
+    optional string tp_apk = 27;
+    optional string tp_icon = 28;
+    optional string tp_screenshot = 29;
+    optional string up_apk = 30;
+    optional string up_icon = 31;
+    optional string up_screenshot = 32;
+    optional bool offshelf_manual = 33;
+    optional string recommend_name = 34;
+    optional string editor_recommend = 35;
+    optional int32 level = 36;
+    optional string suject_comments = 37;
+    optional string category = 38;
+    optional string offshelf_desc = 39;
+    optional int32 sceneId = 40;
+    optional string apk_md5 = 41;
+    optional protobuff.Provider provider = 42;
+}
