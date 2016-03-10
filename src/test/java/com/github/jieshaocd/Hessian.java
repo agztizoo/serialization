@@ -1,25 +1,26 @@
 /**
- * Protobuffer.java
+ * 
  */
 package com.github.jieshaocd;
 
+import com.github.jieshaocd.beanfactory.App;
 import com.github.jieshaocd.beanfactory.AppFactory;
-import com.github.jieshaocd.protobuff.ProtoApp.App;
-import com.github.jieshaocd.protobuff.ProtobufDeserialize;
-import com.github.jieshaocd.protobuff.ProtobufSerialize;
-import com.github.jieshaocd.utils.AppUtil;
+import com.github.jieshaocd.hessian.HessianDeserialize;
+import com.github.jieshaocd.hessian.HessianSerialize;
 
 /**
  * @author jieshao
- * @date Nov 16, 2015
+ * @since Jan 5, 2016
+ *
  */
-public class Protobuffer {
+public class Hessian {
 
-    private static ISerialize<App> ser = new ProtobufSerialize();
-    private static IDeserialize<App> deser = new ProtobufDeserialize();
+    private static ISerialize<App>   ser   = new HessianSerialize();
+
+    private static IDeserialize<App> deser = new HessianDeserialize();
 
     public static void main(String[] args) {
-        App app = AppUtil.copyFrom(AppFactory.createInstance());
+        App app = AppFactory.createInstance();
         testSer(app);
         testDeser(app);
         byte[] array = ser.serialize(app);
